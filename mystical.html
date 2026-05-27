@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mystical Characters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Mystical Characters</h2>
+    <p>Characters like Imu and Joy Boy hold secrets that could reshape the world.</p>
+
+    <div class="mystical-character" onclick="revealMystic(this)">
+      🌌 Mystical Entity: The Whisperer
+      <div class="hidden-lore">
+        “Legends say The Whisperer can hear the voice of all things—even those lost to time.”
+      </div>
+    </div>
+
+    <a href="index.html" class="onepiece-button">⬅ Back to Home</a>
+  </div>
+
+  <script>
+    function revealMystic(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
