@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Piece Fanverse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="logo">
+    <img src="images/onepiecelog.png" alt="One Piece Fanverse Logo">
+  </div>
+
+  
+
+  <nav class="menu">
+  <button onclick="window.location.href='theories.html'">Theories of One Piece</button>
+  <button onclick="window.location.href='mystical.html'">Mystical Characters</button>
+  <button onclick="window.location.href='current.html'">Current Theories</button>
+</nav>
+
+
+  <div class="container">
+
+<!-- 🌟 Crew Gallery Section -->
+<section class="crew-gallery">
+  <h2>Meet the Straw Hat Crew</h2>
+  <div class="crew-container">
+
+    <!-- 🥇 Luffy Card -->
+    <a href="luffy.html" target="_blank" class="crew-card">
+      <img src="https://www.belloflostsouls.net/wp-content/uploads/2023/09/luffy-anime.png" alt="Luffy" />
+      <h3>Monkey D. Luffy</h3>
+    </a>
+
+    <!-- 🗡️ Zoro Card -->
+    <a href="zoro.html" target="_blank" class="crew-card">
+      <img src="https://i.pinimg.com/originals/46/29/87/4629879b5b5c7890ce414dcad00376ae.jpg" alt="Zoro" />
+      <h3>Roronoa Zoro</h3>
+    </a>
+
+    <!-- 🍳 Sanji Card -->
+    <a href="sanji.html" target="_blank" class="crew-card">
+      <img src="https://i.pinimg.com/originals/75/aa/c7/75aac75973bfaefd1bdece6f1c10f410.jpg" alt="Sanji" />
+      <h3>Sanji</h3>
+    </a>
+
+    <!-- 🐟 Jimbei Card -->
+    <a href="jimbei.html" target="_blank" class="crew-card">
+      <img src="https://th.bing.com/th/id/OIP.ClLMnUijQVapPh0GUZChmwHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jimbei" />
+      <h3>Jimbei</h3>
+    </a>
+
+    <!-- Nami Card -->
+    <a href="nami.html" target="_blank" class="crew-card">
+      <img src="https://imgix.ranker.com/user_node_img/50088/1001742697/original/expecting-help-photo-u2?w=650&q=50&fm=pjpg&fit=crop&crop=faces" alt="Nami" />
+      <h3>Nami</h3>
+    </a>
+
+    <!-- Chopper Card -->
+    <a href="chopper.html" target="_blank" class="crew-card">
+      <img src="https://i.pinimg.com/originals/01/cb/93/01cb93670fc2a11d340925578111f507.jpg" alt="Chopper" />
+      <h3>Chopper</h3>
+    </a>
+
+    <!-- Franky Card -->
+    <a href="franky.html" target="_blank" class="crew-card">
+      <img src="https://i.pinimg.com/736x/50/41/ed/5041ed98831b7711e9d15595b7bc7439.jpg" alt="Franky" />
+      <h3>Franky </h3>
+    </a>
+
+     <!-- Robin Card -->
+    <a href="robin.html" target="_blank" class="crew-card">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.en521k44zFMcmCa7g6x-qgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Robin" />
+      <h3>Robin </h3>
+    </a>
+    
+
+  </div>
+</section>
+
+
+    
+
+   
+
+    <!-- Sections -->
+    <!-- 🧠 Whispers of the Will -->
+<div id="theories" class="section">
+  <div class="section-logo">
+    <img src="images/theory-logo.png" alt="Whispers of the Will" />
+    <h2>Whispers of the Will</h2>
+  </div>
+  <p>Some fans believe the One Piece is not a treasure but a concept—freedom itself.</p>
+</div>
+
+<!-- 🌌 Mystic Archives -->
+<div id="mystical" class="section">
+  <div class="section-logo">
+    <img src="<img src="  alt="Mystic Archives" />
+    <h2>Mystic Archives</h2>
+  </div>
+  <p>Characters like Imu and Joy Boy hold secrets that could reshape the world.</p>
+
+  <div class="mystical-character" onclick="revealMystic(this)">
+    🌌 Mystical Entity: The Whisperer
+    <div class="hidden-lore">
+      “Legends say The Whisperer can hear the voice of all things—even those lost to time. Only those with true resolve can unlock its secrets.”
+    </div>
+  </div>
+</div>
+
+<!-- ⚓ Grand Line Gazette -->
+<div id="current" class="section">
+  <div class="section-logo">
+    <img src="images/current-logo.png" alt="Grand Line Gazette" />
+    <h2>Grand Line Gazette</h2>
+  </div>
+  <p>With Egghead Island revealing ancient tech, fans speculate the final war is near.</p>
+
+  <div class="spark"></div>
+  <div class="spark"></div>
+  <div class="spark"></div>
+</div>
+  <!-- ✨ Spark elements -->
+  <div class="spark"></div>
+  <div class="spark"></div>
+  <div class="spark"></div>
+</div>
+
+    <footer>
+      &copy; 2025 One Piece Fanverse.
+    </footer>
+  </div>
+
+  <!-- ✅ JavaScript -->
+  
+
+<script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function revealMystic(element) {
+      element.classList.toggle('active');
+    }
+    
+ 
+  </script>
+
+</body>
+</html>

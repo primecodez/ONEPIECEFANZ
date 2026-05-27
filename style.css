@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background-image: url('https://4kwallpapers.com/images/wallpapers/one-piece-gear-5-luffy-2560x1080-12504.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fdf6e3;
+}
+
+
+.logo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  filter: drop-shadow(0 0 10px #ffd700);
+}
+
+
+.menu {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #001f3f;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: #ff9900;
+}
+
+.menu-button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #001f3f;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #ff9900;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  border-radius: 12px;
+}
+
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  overflow-x: auto; /* allows horizontal scrolling if needed */
+  padding: 20px 0;
+}
+
+
+.crew-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crew-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.crew-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.crew-card h3 {
+  color: #ffd700;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.section {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+/* 🌟 Animated Section Titles */
+.section h2 {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffae00, 0 0 20px #ff7b00, 0 0 30px #ffae00;
+  animation: titleGlow 3s ease-in-out infinite, titleWave 5s linear infinite;
+  letter-spacing: 2px;
+}
+
+/* Pulsing golden glow */
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #ffae00, 0 0 20px #ff7b00, 0 0 30px #ffae00;
+  }
+  50% {
+    text-shadow: 0 0 15px #ffdf70, 0 0 25px #ffd700, 0 0 40px #ffae00;
+  }
+}
+
+/* Gentle wave shimmer */
+@keyframes titleWave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(3px); }
+  100% { transform: translateY(0); }
+}
+
+/* Extra sparkle element over titles */
+.section h2::after {
+  content: '✨';
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  font-size: 1.5rem;
+  animation: sparkleSpin 2.5s infinite linear;
+}
+
+@keyframes sparkleSpin {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.8; }
+  50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.8; }
+} 
+
+.section p {
+  color: #f0f0f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ⚡ Current Theories Glow Card */
+#current {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url('https://i.pinimg.com/originals/4f/52/4b/4f524b7f3cc7a8e09ccdd5f02c7f9586.jpg') center/cover;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+#current::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+      rgba(255, 215, 0, 0.2),
+      transparent 70%);
+  animation: pulseLight 6s infinite ease-in-out;
+}
+
+@keyframes pulseLight {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+#current h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 20px #ffae00;
+  margin-bottom: 1rem;
+}
+
+#current p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fff9db;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Optional floating decorative icon */
+#current::after {
+  content: '⚓';
+  font-size: 4rem;
+  color: rgba(255, 215, 0, 0.08);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  transform: rotate(-15deg);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* 🏴‍☠️ One Piece-themed Back Button */
+.onepiece-button {
+  display: inline-block;
+  margin: 30px auto 0;
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  border: 2px solid #7f3f00;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  text-align: center;
+}
+
+
+.onepiece-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+
+
+
+
+
+/* Ensure container allows positioning */
+.container {
+  position: relative;
+  padding-bottom: 100px; /* Extra space for button */
+}
+
+.mystical-character {
+  background-color: rgba(30, 0, 60, 0.7);
+  border: 2px solid #a020f0;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 30px auto;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e0ccff;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+  transition: all 0.4s ease;
+}
+
+.mystical-character:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(160, 32, 240, 0.8);
+}
+
+.mystical-character.active {
+  background: radial-gradient(circle, #a020f0 0%, #1a0033 100%);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+}
+
+.hidden-lore {
+  margin-top: 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  font-style: italic;
+  color: #ffd6ff;
+}
+
+.mystical-character.active .hidden-lore {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* ✨ Spark Animation */
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #ffd700 0%, rgba(255,215,0,0) 70%);
+  border-radius: 50%;
+  animation: sparkle 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* A few spark variations for randomness */
+.spark:nth-child(1) {
+  top: 30%;
+  left: 40%;
+  animation-delay: 0s;
+}
+
+.spark:nth-child(2) {
+  top: 50%;
+  left: 60%;
+  animation-delay: 0.8s;
+}
+
+.spark:nth-child(3) {
+  top: 70%;
+  left: 45%;
+  animation-delay: 1.5s;
+}
+
+.section-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-logo img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px #ffd700);
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* 🎨 Backgrounds */
+#theories {
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(255,215,0,0.1)),
+              url('https://i.pinimg.com/originals/3e/5f/7c/3e5f7c9f1b3c6c2a3c3f9e3e6e6e6e6e.jpg') center/cover;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+#mystical {
+  background: linear-gradient(to bottom right, rgba(30,0,60,0.7), rgba(160,32,240,0.2)),
+              url('https://i.pinimg.com/originals/2f/3e/4d/2f3e4d5e6f7e8e9f0a1b2c3d4e5f6a7b.jpg') center/cover;
+  border: 2px solid rgba(160, 32, 240, 0.3);
+}
+
+/* 🧭 Floating Icons */
+#theories::after {
+  content: '📜';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 3rem;
+  opacity: 0.1;
+}
+
+#mystical::after {
+  content: '🌌';
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 3rem;
+  opacity: 0.1;
+}
+
+#current::after {
+  content: '⚓';
+  font-size: 4rem;
+  color: rgba(255, 215, 0, 0.08);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  transform: rotate(-15deg);
+}
+
+/* 🌟 Crew Gallery Styles */
+.crew-gallery {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.crew-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 30px;
+  padding: 20px;
+}
+
+
+
+
+/* 🧭 Individual Crew Cards */
+
+
+.crew-card {
+  display: inline-block;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+
+.crew-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.crew-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.crew-card h3 {
+  color: #ffd700;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* 🧑‍✈️ Individual Crew Profile Page */
+.crew-profile {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  margin: 2rem auto;
+  max-width: 600px;
+  color: #fff9db;
+}
+
+.crew-profile img.profile-img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.crew-profile h1 {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffae00;
+  margin-bottom: 10px;
+}
+
+.crew-profile p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .crew-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .crew-container {
+    grid-template-columns: 1fr;
+  }
+}
+
